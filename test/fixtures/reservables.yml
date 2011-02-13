@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rfc: MyString
+  label: MyString
+  minutes: 1
+  price: 1.5
+
+two:
+  rfc: MyString
+  label: MyString
+  minutes: 1
+  price: 1.5

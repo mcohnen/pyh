@@ -1,0 +1,27 @@
+<h1>Reservables#index</h1>
+<p>Find me in app/views/reservables/index.html.erb</p>
+
+<%= myhelper%>
+
+<table>
+	<% @times.each do |time, times| %>
+	<% if times.find {|t| @places[t] }%>
+	<tr>
+		<td><%= l time, :format => :short %></td>
+		<% times.each do |time2| %>
+
+		<td>
+			<% if @places[time2]%>
+			<ul>
+				<% @places[time2].each do |place, items|%>
+				<li><%="#{place.name} (#{items.size})"%></li>	
+				<% end %>
+			</ul>
+			<% end%>
+		</td>
+		<% end %>
+
+	</tr>
+	<% end %>
+	<% end %>
+</table>
